@@ -1,0 +1,9 @@
+C:\Users\ChrisFel\Documents\GitHub\test\LMS Prototype\LMS Prototype\bin\Debug\LMS Prototype.exe
+C:\Users\ChrisFel\Documents\GitHub\test\LMS Prototype\LMS Prototype\bin\Debug\LMS Prototype.pdb
+C:\Users\ChrisFel\Documents\GitHub\test\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.csprojAssemblyReference.cache
+C:\Users\ChrisFel\Documents\GitHub\test\LMS Prototype\LMS Prototype\obj\Debug\LMS_Prototype.Properties.Resources.resources
+C:\Users\ChrisFel\Documents\GitHub\test\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.csproj.GenerateResource.cache
+C:\Users\ChrisFel\Documents\GitHub\test\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.csproj.CoreCompileInputs.cache
+C:\Users\ChrisFel\Documents\GitHub\test\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.exe
+C:\Users\ChrisFel\Documents\GitHub\test\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.pdb
+C:\Users\ChrisFel\Documents\GitHub\test\LMS Prototype\LMS Prototype\obj\Debug\LMS_Prototype.Prototype.resources
