@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/* Inheritence from Course */
+
 public class Student
 {
     public string studentName;
