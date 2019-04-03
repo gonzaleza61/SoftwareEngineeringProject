@@ -75,4 +75,20 @@ public class Student
     {
         account = theAccount;
     }
+    public void account()
+    {
+        
+    }
+    public void logIn()
+    {
+        
+    }
+    public void logOff()
+    {
+        
+    }
+    public void viewRecord()
+    {
+        
+    }
 }
