@@ -12,11 +12,12 @@ public class Student
     public string registeredCourses;
     public int examScores;
     public double GPACalculation;
+    public bool account;
     public Student()
     {
 
     }
-    public Student(string theStudentName, int theStudentID, string theStudentPassword, string theRegisteredCourses, int theExamScores, double theGPACalculation)
+    public Student(string theStudentName, int theStudentID, string theStudentPassword, string theRegisteredCourses, int theExamScores, double theGPACalculation, bool theAccount)
     {
         studentName = theStudentName;
         studentID = theStudentID;
@@ -24,6 +25,7 @@ public class Student
         registeredCourses = theRegisteredCourses;
         examScores = theExamScores;
         GPACalculation = theGPACalculation;
+        account = theAccount;
     }
     public string getStudentName()
     {
@@ -45,6 +47,10 @@ public class Student
     {
         return GPACalculation;
     }
+    public bool getAccount()
+    {
+        return account;
+    }
     public void setStudentName(string theStudentName)
     {
         studentName = theStudentName;
@@ -64,5 +70,9 @@ public class Student
     public void setGPACalculation(double theGPACalculation)
     {
         GPACalculation = theGPACalculation;
+    }
+    public void setAccount(bool theAccount)
+    {
+        account = theAccount;
     }
 }
