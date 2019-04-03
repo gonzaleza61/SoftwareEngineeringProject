@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/* Inheritance from Student and Course */
+
 public class Administrator
 {
     public string adminName;
