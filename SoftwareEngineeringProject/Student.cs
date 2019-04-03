@@ -8,6 +8,7 @@ public class Student
 {
     public string studentName;
     public int studentID;
+    private string studentPassword;
     public string registeredCourses;
     public int examScores;
     public double GPACalculation;
@@ -15,10 +16,11 @@ public class Student
     {
 
     }
-    public Student(string theStudentName, int theStudentID, string theRegisteredCourses, int theExamScores, double theGPACalculation)
+    public Student(string theStudentName, int theStudentID, string theStudentPassword, string theRegisteredCourses, int theExamScores, double theGPACalculation)
     {
         studentName = theStudentName;
         studentID = theStudentID;
+        studentPassword = theStudentPassword;
         registeredCourses = theRegisteredCourses;
         examScores = theExamScores;
         GPACalculation = theGPACalculation;
