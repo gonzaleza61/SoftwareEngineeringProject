@@ -77,10 +77,10 @@ public class Student
     {
         account = theAccount;
     }
-    public void account()
-    {
+    //public void account()
+    //{
         
-    }
+    //}
     public void logIn()
     {
         

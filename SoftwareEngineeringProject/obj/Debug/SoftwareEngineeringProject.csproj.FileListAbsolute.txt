@@ -1,0 +1,7 @@
+C:\Users\Chris F\Documents\GitHub\SoftwareEngineeringProject\SoftwareEngineeringProject\obj\Debug\SoftwareEngineeringProject.csprojAssemblyReference.cache
+C:\Users\Chris F\Documents\GitHub\SoftwareEngineeringProject\SoftwareEngineeringProject\obj\Debug\SoftwareEngineeringProject.csproj.CoreCompileInputs.cache
+C:\Users\Chris F\Documents\GitHub\SoftwareEngineeringProject\SoftwareEngineeringProject\bin\Debug\SoftwareEngineeringProject.exe.config
+C:\Users\Chris F\Documents\GitHub\SoftwareEngineeringProject\SoftwareEngineeringProject\bin\Debug\SoftwareEngineeringProject.exe
+C:\Users\Chris F\Documents\GitHub\SoftwareEngineeringProject\SoftwareEngineeringProject\bin\Debug\SoftwareEngineeringProject.pdb
+C:\Users\Chris F\Documents\GitHub\SoftwareEngineeringProject\SoftwareEngineeringProject\obj\Debug\SoftwareEngineeringProject.exe
+C:\Users\Chris F\Documents\GitHub\SoftwareEngineeringProject\SoftwareEngineeringProject\obj\Debug\SoftwareEngineeringProject.pdb
