@@ -1,96 +1,107 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CourseNamespace;
 
-/* Inheritence from Course */
-
-public class Student
+namespace StudentNamespace
 {
-    public string studentName;
-    public int studentID;
-    private string studentPassword;
-    public string registeredCourses;
-    public int examScores;
-    public double GPACalculation;
-    public bool account;
-    public Student()
+    public class Student
     {
+        //All variables and classes must be private (removed extra "student" from variable names because it's repetitive)
+        private string name;
+        private int ID;
+        private string password;
+        private double GPA;
+        private bool account;
+        private Course course1;
+        private Course course2;
+        private Course course3;
 
-    }
-    public Student(string theStudentName, int theStudentID, string theStudentPassword, string theRegisteredCourses, int theExamScores, double theGPACalculation, bool theAccount)
-    {
-        studentName = theStudentName;
-        studentID = theStudentID;
-        studentPassword = theStudentPassword;
-        registeredCourses = theRegisteredCourses;
-        examScores = theExamScores;
-        GPACalculation = theGPACalculation;
-        account = theAccount;
-    }
-    public string getStudentName()
-    {
-        return studentName;
-    }
-    public int getStudentID()
-    {
-        return studentID;
-    }
-    public string getRegisteredCourses()
-    {
-        return registeredCourses;
-    }
-    public int getExamScores()
-    {
-        return examScores;
-    }
-    public double getGPACalculation()
-    {
-        return GPACalculation;
-    }
-    public bool getAccount()
-    {
-        return account;
-    }
-    public void setStudentName(string theStudentName)
-    {
-        studentName = theStudentName;
-    }
-    public void setStudentID(int theStudentID)
-    {
-        studentID = theStudentID;
-    }
-    public void setRegisteredCourses(string theRegisteredCourses)
-    {
-        registeredCourses = theRegisteredCourses;
-    }
-    public void setExamScores(int theExamScores)
-    {
-        examScores = theExamScores;
-    }
-    public void setGPACalculation(double theGPACalculation)
-    {
-        GPACalculation = theGPACalculation;
-    }
-    public void setAccount(bool theAccount)
-    {
-        account = theAccount;
-    }
-    //public void account()
-    //{
+        public Student()
+        {
+            //Assign dummy values.
+            name = "dummy";
+            ID = 0000000001;
+            GPA = 0.5;
+            course1 = new Course();
+            course2 = new Course();
+            course3 = new Course();
+        }
+        public Student(string name, int ID, string password, double GPA, bool account)
+        {
+            this.name = name;
+            this.ID = ID;
+            this.password = password;
+            this.GPA = GPA;
+            this.account = account;
 
-    //}
-    public void logIn()
-    {
+            //Add three courses
+            course1 = new Course();
+            course2 = new Course();
+            course3 = new Course();
+        }
+        public string getName()
+        {
+            return name;
+        }
+        public int getID()
+        {
+            return ID;
+        }
+        
+        public double getGPA()
+        {
+            return GPA;
+        }
+        public bool getAccount()
+        {
+            return account;
+        }
 
-    }
-    public void logOff()
-    {
+        public Course getCourse1()
+        {
+            return course1;
+        }
 
-    }
-    public void viewRecord()
-    {
+        public Course getCourse2()
+        {
+            return course2;
+        }
 
+        public Course getCourse3()
+        {
+            return course3;
+        }
+
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+        public void setID(int ID)
+        {
+            this.ID = ID;
+        }
+        
+        public void setGPA(double GPA)
+        {
+            this.GPA = GPA;
+        }
+        public void setAccount(bool account)
+        {
+            this.account = account;
+        }
+        //public void account()
+        //{
+
+        //}
+        public void logIn()
+        {
+
+        }
+        public void logOff()
+        {
+
+        }
+        public void viewRecord()
+        {
+
+        }
     }
 }
