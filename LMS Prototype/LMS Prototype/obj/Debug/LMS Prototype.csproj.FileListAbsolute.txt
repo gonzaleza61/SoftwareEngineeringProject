@@ -16,3 +16,12 @@ C:\Users\Chris F\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS P
 C:\Users\Chris F\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.csproj.CoreCompileInputs.cache
 C:\Users\Chris F\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.exe
 C:\Users\Chris F\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.pdb
+C:\Users\chris\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\bin\Debug\LMS Prototype.exe
+C:\Users\chris\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\bin\Debug\LMS Prototype.pdb
+C:\Users\chris\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.csprojResolveAssemblyReference.cache
+C:\Users\chris\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\obj\Debug\LMS_Prototype.Prototype.resources
+C:\Users\chris\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\obj\Debug\LMS_Prototype.Properties.Resources.resources
+C:\Users\chris\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.csproj.GenerateResource.Cache
+C:\Users\chris\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.csproj.CoreCompileInputs.cache
+C:\Users\chris\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.exe
+C:\Users\chris\Documents\GitHub\SoftwareEngineeringProject\LMS Prototype\LMS Prototype\obj\Debug\LMS Prototype.pdb

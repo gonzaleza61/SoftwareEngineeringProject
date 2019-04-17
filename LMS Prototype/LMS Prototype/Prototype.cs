@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using StudentNamespace;
 using Microsoft.VisualBasic;
+using AdministratorNameSpace;
 
 namespace LMS_Prototype
 {
@@ -15,9 +16,47 @@ namespace LMS_Prototype
     {
         DataTable table = new DataTable();
 
+        public static bool isAdmin = false;
+
+        //Create student object
+        Student studentA = new Student();
+        Administrator admin = new Administrator();
+
+        
+
         public Prototype()
         {
+            string adminName = "";
+            string password = "";
+
+            while (!(adminName.Equals("admin")))
+            {
+                adminName = Interaction.InputBox("Enter user name: ", "LogIn", "", 500, 300);
+
+                if (adminName.Equals("admin"))
+                    adminName = "admin";
+                else
+                    MessageBox.Show("User not found. Try again.");
+            }
+
+            while (!(password.Equals("1234")))
+            {
+                password = Interaction.InputBox("Enter password: ", "Password", "", 500, 300);
+
+                if (password.Equals("1234"))
+                    password = "1234";
+                else
+                    MessageBox.Show("Password not found. Try again.");
+            }
+
+
+
+
+
+
+
             InitializeComponent();
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -42,8 +81,7 @@ namespace LMS_Prototype
             table.Columns.Add("Exam 2 (8%)", typeof(int));
             table.Columns.Add("Exam 3 (50%)", typeof(int));
 
-            //Create student object
-            Student studentA = new Student();
+           
 
             //Output sample of studentA using Student methods onto GUI
             table.Rows.Add(studentA.getID(), "Student A", studentA.getGPA(), studentA.getCourse1().getExam1(), studentA.getCourse1().getExam2(), studentA.getCourse1().getExam3(), 100, 100, 100, 100, 100, 99);
@@ -77,8 +115,8 @@ namespace LMS_Prototype
             int rowIndex = dataGridView1.CurrentCell.RowIndex;
 
             int ID = 0;
-            string name;
-            double GPA;
+            string name = "";
+            double GPA = 3.5;
 
             ID = int.Parse(Interaction.InputBox("Enter ID: ", "Row Input", "", 500, 300));
 
@@ -115,6 +153,21 @@ namespace LMS_Prototype
             int rowIndex = dataGridView1.CurrentCell.RowIndex;
 
             table.Rows.RemoveAt(rowIndex);
+        }
+
+        private void logOff(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Do you really want to close the program?", "Exit", MessageBoxButtons.YesNo);
+
+            if(dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
