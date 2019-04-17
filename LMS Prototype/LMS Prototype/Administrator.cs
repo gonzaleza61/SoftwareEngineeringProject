@@ -4,78 +4,85 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/* Inheritance from Student and Course */
-
 public class Administrator
 {
-    public string adminName;
-    public int adminID;
-    private string adminPassword;
-    public bool account;
+    private string name;
+    private int ID;
+    private string password;
+    private bool account;
+
     public Administrator()
     {
+        name = "dummy admin name";
+        ID = 12345;
+        password = "no password";
+        account = true;
+    }
+    public Administrator(string name, int ID, string password, bool account)
+    {
+        this.name = name;
+        this.ID = ID;
+        this.password = password;
+        this.account = account;
+    }
 
-    }
-    public Administrator(string theAdminName, int theAdminID, bool theAccount)
+    public string getName()
     {
-        adminName = theAdminName;
-        adminID = theAdminID;
-        account = theAccount;
+        return name;
     }
-    public string getAdminName()
+
+    public int getID()
     {
-        return adminName;
+        return ID;
     }
-    public int getAdminID()
-    {
-        return adminID;
-    }
+
     public bool getAccount()
     {
         return account;
     }
-    public void setAdminName(string theAdminName)
+
+    public void setName(string name)
     {
-        adminName = theAdminName;
+        this.name = name;
     }
-    public void setAdminID(int theAdminID)
+    public void setID(int ID)
     {
-        adminID = theAdminID;
+        this.ID = ID;
     }
-    public void setAccount(bool theAccount)
+    public void setAccount(bool account)
     {
-        account = theAccount;
+        this.account = account;
     }
     public void logIn()
     {
-        
+
     }
     public void logOff()
     {
-        
+
     }
     public void addRecord()
     {
-        
+
     }
     public void deleteRecord()
     {
-        
+
     }
     public void insertRecord()
     {
-        
+
     }
     public void modifyRecord()
     {
-        
+
     }
     public void browseRecord()
     {
-        
+
     }
     public void checkGPA()
     {
-        
+
     }
 }

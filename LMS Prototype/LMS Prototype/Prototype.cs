@@ -12,6 +12,8 @@ namespace LMS_Prototype
 {
     public partial class Prototype : Form
     {
+        DataTable table = new DataTable();
+
         public Prototype()
         {
             InitializeComponent();
@@ -24,8 +26,6 @@ namespace LMS_Prototype
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataTable table = new DataTable();
-
             table.Columns.Add("ID", typeof(int));
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("GPA", typeof(float));
@@ -71,7 +71,7 @@ namespace LMS_Prototype
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void insert(object sender, EventArgs e)
         {
 
         }
@@ -79,6 +79,23 @@ namespace LMS_Prototype
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void add(object sender, EventArgs e)
+        //Purpose: add a row (at end)
+        {
+            //ask & verify ID, name, GPA, exams...
+
+            table.Rows.Add(6, "Student F", 1.0, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+        }
+
+        private void delete(object sender, EventArgs e)
+        //Purpose: delete selected row
+        {
+            int rowIndex = dataGridView1.CurrentCell.RowIndex;
+
+            table.Rows.RemoveAt(rowIndex);
         }
     }
 }
