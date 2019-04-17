@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using StudentNamespace;
+using Microsoft.VisualBasic;
 
 namespace LMS_Prototype
 {
@@ -73,7 +74,25 @@ namespace LMS_Prototype
 
         private void insert(object sender, EventArgs e)
         {
+            int rowIndex = dataGridView1.CurrentCell.RowIndex;
 
+            int ID = 0;
+            string name;
+            double GPA;
+
+            ID = int.Parse(Interaction.InputBox("Enter ID: ", "Row Input", "", 500, 300));
+
+            //name = Interaction.InputBox("Enter name: ", "Row Input", "", 500, 300);
+
+            //GPA = double.Parse(Interaction.InputBox("Enter GPA: ", "Row Input", "", 500, 300));
+
+            
+
+            DataRow dr = table.NewRow();
+            dr[0] = ID;
+            //dr[1] = name;
+            //dr[2] = GPA;
+            table.Rows.InsertAt(dr, rowIndex);
         }
 
         private void button3_Click(object sender, EventArgs e)
