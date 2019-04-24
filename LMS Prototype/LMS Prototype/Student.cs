@@ -18,8 +18,8 @@ namespace StudentNamespace
         {
             //Assign dummy values.
             name = "dummy";
-            ID = 0000000001;
-            GPA = 0.5;
+            ID = 0000000000;
+            GPA = 0.0;
             course1 = new Course();
             course2 = new Course();
             course3 = new Course();
@@ -37,6 +37,7 @@ namespace StudentNamespace
             course2 = new Course();
             course3 = new Course();
         }
+
         public string getName()
         {
             return name;

@@ -6,32 +6,37 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using StudentNamespace;
 using Microsoft.VisualBasic;
+using StudentNamespace;
 using AdministratorNameSpace;
+using CourseNamespace;
 
 namespace LMS_Prototype
 {
     public partial class Prototype : Form
     {
-        DataTable table = new DataTable();
+        DataTable table = new DataTable();    
 
         public static bool isAdmin = false;
 
         //Create student object
-        Student studentA = new Student();
+        Student bob = new Student("Bob", 1, "bob", 3.99, true);
+
+
+        
         Administrator admin = new Administrator();
 
         
 
         public Prototype()
         {
+            
             string adminName = "";
             string password = "";
 
             while (!(adminName.Equals("admin")))
             {
-                adminName = Interaction.InputBox("Enter user name: ", "LogIn", "", 500, 300);
+                adminName = Interaction.InputBox("Enter user name: ", "Login (user: admin, pass: 1234)", "", 500, 300);     //check code
 
                 if (adminName.Equals("admin"))
                     adminName = "admin";
@@ -41,14 +46,14 @@ namespace LMS_Prototype
 
             while (!(password.Equals("1234")))
             {
-                password = Interaction.InputBox("Enter password: ", "Password", "", 500, 300);
+                password = Interaction.InputBox("Enter password: ", "Password (user: admin, pass: 1234)", "", 500, 300);    //check code
 
                 if (password.Equals("1234"))
                     password = "1234";
                 else
                     MessageBox.Show("Password not found. Try again.");
             }
-
+            
 
 
 
@@ -69,28 +74,38 @@ namespace LMS_Prototype
             table.Columns.Add("ID", typeof(int));
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("GPA", typeof(float));
-            table.Columns.Add("Exam 1 (15%)", typeof(int));
-            table.Columns.Add("Exam 2 (15%)", typeof(int));
-            table.Columns.Add("Exam 3 (20%)", typeof(int));
+            table.Columns.Add("[1]\nCS3304 Data & Info. Struc. \n\nExam 1", typeof(int));
+            table.Columns.Add("[1]\nCS3304 Data & Info. Struc. \n\nExam 2", typeof(int));
+            table.Columns.Add("[1]\nCS3304 Data & Info. Struc. \n\nExam 3", typeof(int));
 
-            table.Columns.Add("Exam 1 (10%)", typeof(int));
-            table.Columns.Add("Exam 2 (10%)", typeof(int));
-            table.Columns.Add("Exam 3 (30%)", typeof(int));
+            table.Columns.Add("[2]\nCS3306 Theory of Comp. \n\nExam 1", typeof(int));
+            table.Columns.Add("[2]\nCS3306 Theory of Comp. \n\nExam 2", typeof(int));
+            table.Columns.Add("[2]\nCS3306 Theory of Comp. \n\nExam 3", typeof(int));
 
-            table.Columns.Add("Exam 1 (8%)", typeof(int));
-            table.Columns.Add("Exam 2 (8%)", typeof(int));
-            table.Columns.Add("Exam 3 (50%)", typeof(int));
+            table.Columns.Add("[3]\nCS4315 Operating Systems \n\nExam 1", typeof(int));
+            table.Columns.Add("[3]\nCS4315 Operating Systems \n\nExam 2", typeof(int));
+            table.Columns.Add("[3]\nCS4315 Operating Systems \n\nExam 3", typeof(int));
 
-           
+            table.Columns.Add("[4]\nCS4318 Database Systems \n\nExam 1", typeof(int));
+            table.Columns.Add("[4]\nCS4318 Database Systems \n\nExam 2", typeof(int));
+            table.Columns.Add("[4]\nCS4318 Database Systems \n\nExam 3", typeof(int));
+
+
 
             //Output sample of studentA using Student methods onto GUI
-            table.Rows.Add(studentA.getID(), "Student A", studentA.getGPA(), studentA.getCourse1().getExam1(), studentA.getCourse1().getExam2(), studentA.getCourse1().getExam3(), 100, 100, 100, 100, 100, 99);
-            //table.Rows.Add(1, "Student A", 3.99, 100, 100, 100, 100, 100, 100, 100, 100, 99); somewhat equivalent to the row above
+            //table.Rows.Add(bob.getID(), "Bob", bob.getGPA(), bob.getCourse1().getExam1(), bob.getCourse1().getExam2(), bob.getCourse1().getExam3(), 100, 100, 100, 100, 100, 99);
 
-            table.Rows.Add(2, "Student B", 3.01, 80, 80, 80, 80, 80, 80, 80, 80, 88);
-            table.Rows.Add(3, "Student C", 2.01, 70, 70, 70, 70, 70, 70, 70, 70, 77);
-            table.Rows.Add(4, "Student D", 1.01, 60, 60, 60, 60, 60, 60, 60, 60, 66);
-            table.Rows.Add(5, "Student E", 0.01, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+            table.Rows.Add(1, "Bob", 3.75, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 99);
+            table.Rows.Add(2, "Cob", 3.50, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 88);
+            table.Rows.Add(3, "Dob", 3.00, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 77);
+            table.Rows.Add(4, "Fob", 2.50, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 66);
+            table.Rows.Add(5, "Gob", 2.00, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 55);
+            table.Rows.Add(6, "Hob", 1.50, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 44);
+            table.Rows.Add(7, "Job", 1.25, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 33);
+            table.Rows.Add(8, "Kob", 1.00, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 22);
+            table.Rows.Add(9, "Lob", 0.10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11);
+            table.Rows.Add(10, "Mob", 0.05, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5);
+            table.Rows.Add(11, "Nob", 0.00, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
             dataGridView1.DataSource = table;
         }
@@ -128,9 +143,10 @@ namespace LMS_Prototype
 
             DataRow dr = table.NewRow();
             dr[0] = ID;
-            //dr[1] = name;
+            dr[1] = "Enter Info";
             //dr[2] = GPA;
             table.Rows.InsertAt(dr, rowIndex);
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -144,7 +160,7 @@ namespace LMS_Prototype
         {
             //ask & verify ID, name, GPA, exams...
 
-            table.Rows.Add(6, "Student F", 1.0, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+            table.Rows.Add(0, "Enter Info", 0.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         }
 
         private void delete(object sender, EventArgs e)
