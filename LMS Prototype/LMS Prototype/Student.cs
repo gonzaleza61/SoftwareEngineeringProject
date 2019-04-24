@@ -4,7 +4,6 @@ namespace StudentNamespace
 {
     public class Student
     {
-        //All variables and classes must be private (removed extra "student" from variable names because it's repetitive)
         private string name;
         private int ID;
         private string password;
@@ -16,8 +15,7 @@ namespace StudentNamespace
 
         public Student()
         {
-            //Assign dummy values.
-            name = "dummy";
+            name = "";
             ID = 0000000000;
             GPA = 0.0;
             course1 = new Course();
@@ -32,7 +30,6 @@ namespace StudentNamespace
             this.GPA = GPA;
             this.account = account;
 
-            //Add three courses
             course1 = new Course();
             course2 = new Course();
             course3 = new Course();
