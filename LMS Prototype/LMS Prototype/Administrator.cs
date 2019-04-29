@@ -55,38 +55,5 @@ namespace AdministratorNameSpace
         {
             this.account = account;
         }
-        public void logIn()
-        {
-
-        }
-        public void logOff()
-        {
-
-        }
-        public void addRecord()
-        {
-
-        }
-        public void deleteRecord()
-        {
-
-        }
-        public void insertRecord()
-        {
-
-        }
-        public void modifyRecord()
-        {
-
-        }
-        public void browseRecord()
-        {
-
-        }
-        public void checkGPA()
-        {
-
-        }
     }
-
 }

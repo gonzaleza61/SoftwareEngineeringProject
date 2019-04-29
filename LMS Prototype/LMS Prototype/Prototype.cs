@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -16,18 +17,11 @@ namespace LMS_Prototype
     public partial class Prototype : Form
     {
         DataTable table = new DataTable();    
+        Student bob = new Student("Bob", 1, "bob", 3.99, true);
+        Administrator admin = new Administrator();
 
         public static bool isAdmin = false;
         public static bool isStudent = false;
-
-        //Create student object
-        Student bob = new Student("Bob", 1, "bob", 3.99, true);
-
-
-        
-        Administrator admin = new Administrator();
-
-        
 
         public Prototype()
         {
@@ -35,10 +29,6 @@ namespace LMS_Prototype
             string name = "";
             string password = "";
             bool isNameFound = false;
-
-            //Check if an administrator is logging in
-
-            //while (!(name.Equals("admin")) && !(name.Equals("bob")))
 
             while (!isNameFound)
             {
@@ -72,10 +62,6 @@ namespace LMS_Prototype
                     MessageBox.Show("Password not found. Try again.");
             }
 
-            
-            
-
-
             InitializeComponent();
 
         }
@@ -105,11 +91,6 @@ namespace LMS_Prototype
             table.Columns.Add("[4]\nCS4318 Database Systems \n\nExam 1", typeof(int));
             table.Columns.Add("[4]\nCS4318 Database Systems \n\nExam 2", typeof(int));
             table.Columns.Add("[4]\nCS4318 Database Systems \n\nExam 3", typeof(int));
-
-
-
-            //Output sample of studentA using Student methods onto GUI
-            //table.Rows.Add(bob.getID(), "Bob", bob.getGPA(), bob.getCourse1().getExam1(), bob.getCourse1().getExam2(), bob.getCourse1().getExam3(), 100, 100, 100, 100, 100, 99);
 
             if(isStudent)
             {
@@ -151,6 +132,7 @@ namespace LMS_Prototype
         }
 
         private void insert(object sender, EventArgs e)
+        //Purpose: insert a row into table
         {
             if(isStudent)
             {
@@ -162,21 +144,12 @@ namespace LMS_Prototype
                 int rowIndex = dataGridView1.CurrentCell.RowIndex;
 
                 int ID = 0;
-                //string name = "";
-                //double GPA = 3.5;
 
                 ID = int.Parse(Interaction.InputBox("Enter ID: ", "Row Input", "", 500, 300));
-
-                //name = Interaction.InputBox("Enter name: ", "Row Input", "", 500, 300);
-
-                //GPA = double.Parse(Interaction.InputBox("Enter GPA: ", "Row Input", "", 500, 300));
-
-
 
                 DataRow dr = table.NewRow();
                 dr[0] = ID;
                 dr[1] = "Enter Info";
-                //dr[2] = GPA;
                 table.Rows.InsertAt(dr, rowIndex);
             }
         }
@@ -220,6 +193,7 @@ namespace LMS_Prototype
         }
 
         private void logOff(object sender, EventArgs e)
+        //Purpose: log off from program
         {
             DialogResult dialog = MessageBox.Show("Do you really want to close the program?", "Exit", MessageBoxButtons.YesNo);
 

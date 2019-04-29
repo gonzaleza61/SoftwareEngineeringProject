@@ -22,6 +22,7 @@ namespace StudentNamespace
             course2 = new Course();
             course3 = new Course();
         }
+
         public Student(string name, int ID, string password, double GPA, bool account)
         {
             this.name = name;
@@ -39,6 +40,7 @@ namespace StudentNamespace
         {
             return name;
         }
+
         public int getID()
         {
             return ID;
@@ -48,6 +50,7 @@ namespace StudentNamespace
         {
             return GPA;
         }
+
         public bool getAccount()
         {
             return account;
@@ -72,6 +75,7 @@ namespace StudentNamespace
         {
             this.name = name;
         }
+
         public void setID(int ID)
         {
             this.ID = ID;
@@ -81,25 +85,10 @@ namespace StudentNamespace
         {
             this.GPA = GPA;
         }
+
         public void setAccount(bool account)
         {
             this.account = account;
-        }
-        //public void account()
-        //{
-
-        //}
-        public void logIn()
-        {
-
-        }
-        public void logOff()
-        {
-
-        }
-        public void viewRecord()
-        {
-
         }
     }
 }

@@ -1,6 +1,0 @@
-ID	Name		GPA	Exam 1 (15%)	Exam 2 (15%)	Exam 3 (20%)	Exam 1 (10%)	Exam 2 (10%)	Exam 3 (30%)
-1	Student A	3.99	100		100		100		100		100		99
-2	Student B	3.01	80		80		80		80		80		88
-3	Student C	2.01	70		70		70		70		70		77
-4	Student D	1.01	60		60		60		60		60		66
-5	Student E	0.01	0		0		0		0		0		1
